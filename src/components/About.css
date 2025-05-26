@@ -1,0 +1,178 @@
+/* About.css */
+.about-container {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  min-height: 100vh;
+  background-color: #1a1a2e;
+  padding-top: 80px;
+}
+
+/* Navbar (consistent with HomePage) */
+.transparent-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #4cc9f0;
+}
+
+/* About Section */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.about-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4cc9f0;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.personal-info {
+  margin-bottom: 40px;
+  background-color: rgba(76, 201, 240, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.info-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: baseline;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #4cc9f0;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.info-value {
+  color: #e0e0e0;
+  flex: 1;
+}
+
+.about-description {
+  line-height: 1.8;
+}
+
+.about-description p {
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.imqa-title {
+  color: #4cc9f0;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Photo Section */
+.about-photo {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  
+  .about-photo {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+  
+  .personal-info {
+    padding: 15px;
+  }
+  
+  .info-item {
+    flex-direction: column;
+  }
+  
+  .info-label {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transparent-navbar {
+    padding: 15px 20px;
+  }
+  
+  .navbar-links {
+    gap: 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
